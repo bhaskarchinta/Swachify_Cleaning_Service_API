@@ -5,5 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+ <ItemGroup>
+    <ProjectReference Include="..\Swachify.Infrastructure\Swachify.Infrastructure.csproj" />
+  </ItemGroup>
+ <ItemGroup>
+   <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+ </ItemGroup>
 </Project>
