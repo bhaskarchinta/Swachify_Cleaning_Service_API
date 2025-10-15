@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Swachify.Infrastructure.Models;
 using Swachify.Infrastructure.Data;
-
 namespace Swachify.Application;
 
 public class AuthService(MyDbContext _dbContext)
@@ -27,10 +26,10 @@ public class AuthService(MyDbContext _dbContext)
     //     return userAuth;
     // }
 
-    // public async Task<user_auth?> ValidateCredentialsAsync(string email, string password, CancellationToken ct = default)
-    // {
-    //     var user_auth = await db.user_auth.FirstOrDefaultAsync(u => u.login_name == email, ct);
-    //     if (user_auth is null) return null;
-    //     return hasher.Verify(password, user_auth.password) ? user_auth : null;
-    // }
+    //public async Task<user_auth?> ValidateCredentialsAsync(string email, string password, CancellationToken ct = default)
+    //{
+    //    var user_auth = await db.user_auth.FirstOrDefaultAsync(u => u.login_name == email, ct);
+    //    if (user_auth is null) return null;
+    //    return hasher.Verify(password, user_auth.password) ? user_auth : null;
+    //}
 }
