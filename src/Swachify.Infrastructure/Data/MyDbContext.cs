@@ -5,17 +5,8 @@ using Swachify.Infrastructure.Models;
 
 namespace Swachify.Infrastructure.Data;
 
-public class MyDbContext : DbContext
+public class MyDbContext(DbContextOptions<MyDbContext> options) : DbContext(options)
 {
-    public MyDbContext()
-    {
-    }
-
-    public MyDbContext(DbContextOptions<MyDbContext> options)
-        : base(options)
-    {
-    }
-
     public DbSet<customer_complaint> customer_complaints { get; set; }
 
     public DbSet<master_department> master_departments { get; set; }
@@ -261,5 +252,4 @@ public class MyDbContext : DbContext
         });
         base.OnModelCreating(modelBuilder);
     }
-
 }
